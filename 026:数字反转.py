@@ -1,17 +1,15 @@
-n = input()
-s = n.split('')
-print(n, s)
-# if n == 0:
-#     print(0);
-# else:
-#     sign = '' if n > 0 else ''
-#     n = string(n)
+s = input()
+n = int(s)
+if n < 0:
+    s1 = s[-1:0:-1]
+else:
+    s1 = s[-1::-1]
+r = ""
+for c in s1:
+    r += str(c);
+r = int(r)
 
-# for c in s:
-#     if 'a' <= c <= 'z':
-#         print(chr(ord(c) - 32), end="")
-#     elif 'A' <= c <= 'Z':
-#         print(chr(ord(c) + 32), end="")
-#     else:
-#         print(c, end="")
+if n < 0:
+    r = '-' + str(r)
+print(r)
 
